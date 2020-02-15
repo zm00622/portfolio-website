@@ -13,24 +13,32 @@
 }
 body{
   font-family: 'Raleway';
+  color: white;
 }
 .App
 {
   display: flex;
   width: 100vw;
   min-height: 100vh;
+  background-image: url('./img/blur1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 nav
 {
   padding:60px 30px 0px 30px ;
   flex:var(--sidebar-flex);
-  background: rgb(238,103,143);
-  background: linear-gradient(180deg, rgba(238,103,143,1) 50%, rgba(132,124,252,1) 80%);
+  background-image: url('./img/blur2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background: rgb(238,103,143);
+  background: linear-gradient(180deg, rgba(238,103,143,1) 50%, rgba(132,124,252,1) 80%); */
 }
 .condiv
 {
   padding: 100px ;
-  background-color: #f4f5f9;
+  
+  /* background-color: #f4f5f9; */
   flex:var(--condiv-flex);
 }
 
@@ -39,18 +47,20 @@ nav
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
-  
+  align-items: center;  
 }
 .profilepic
 {
   border-radius: 50%;
+  border: solid grey;
   width: 400px;
   margin: 30px;
 }
+
 .typingeffect
 {
   font-size: var(--typing-font);
+  color: white;
   margin-bottom: 30px;
 }
 
