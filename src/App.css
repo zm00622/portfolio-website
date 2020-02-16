@@ -1,79 +1,33 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700&display=swap');
-:root{
-  --sidebar-flex:1.5;
-  --condiv-flex:6;
-  --fontsize-p:1.2rem;
-  --fontsize-nav:1.6rem;
-  --typing-font:3rem;
+* {
+  box-sizing: border-box;
 }
-*
-{
-  margin:0;
-  padding: 0;
+
+.row::after {
+  content: "";
+  clear: both;
+  display:  block;
 }
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
 body{
   font-family: 'Raleway';
   color: white;
 }
-.App
-{
-  display: flex;
-  width: 100vw;
-  min-height: 100vh;
-  background-image: url('./img/blur1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-nav
-{
-  padding:60px 30px 0px 30px ;
-  flex:var(--sidebar-flex);
-  background-image: url('./img/blur2.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* background: rgb(238,103,143);
-  background: linear-gradient(180deg, rgba(238,103,143,1) 50%, rgba(132,124,252,1) 80%); */
-}
-.condiv
-{
-  padding: 100px ;
-  
-  /* background-color: #f4f5f9; */
-  flex:var(--condiv-flex);
+
+h1,h2,h3,h4,p{
+  margin: 10px;
 }
 
-.home
-{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;  
-}
-.profilepic
-{
-  border-radius: 50%;
-  border: solid grey;
-  width: 400px;
-  margin: 30px;
-}
-
-.typingeffect
-{
-  font-size: var(--typing-font);
-  color: white;
-  margin-bottom: 30px;
-}
-
-nav ul{
-  font-size:var(--fontsize-nav) ;
+ul {
+  /* font-size:var(--fontsize-nav) ; */
   text-align: center;
   list-style-type: none;
   text-decoration: none;
   color: white !important;
-}
-nav ul li
-{
-  margin:40px;
 }
 
 a
@@ -82,33 +36,97 @@ a
   color: white;
 }
 
+/*Background*/
+.App
+{
+  display: flex; 
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./img/blur1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+/* For desktop: */
+
+.col-nav {
+  width: 25vw;
+  padding: 5px 5px 5px 5px ;
+  background-image: url('./img/blur2.png');
+  padding-bottom: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.col-nav-item li {
+  display: block;
+  margin-right: 100vw;
+}
+
+.col-social {
+  margin-left: 22vw;
+  bottom: 60px;
+  font-size: 25px;
+  color: #9a9b9c;
+} 
+
+.col-social i
+{
+  
+  padding-left:30px;
+  padding-right:30px;
+  font-size: 25px;
+  color: #9a9b9c;
+}
+
+.col-social i:hover
+{
+  color: #ffffff;
+}
+
+.typingeffect
+{ 
+  text-align: center;
+  margin-left: 21.5vw;
+  /* position: center;
+  margin-left: 25vw;
+  width: 50vw; */
+  font-size: 40px;
+  color: white;
+}
+
+.profilepic
+{
+  position: relative;
+  margin-top: 10vh;
+  margin-left: 25vw;
+  border-radius: 50%;
+  border: solid grey;
+  width: 400px;
+}
+
+
+
+
+
+
+
+
+/*End of homepage styling*/
+/*Beginning of subpage styling*/
+
 .subtopic
 {
   margin:10px 10px 30px 10px !important;
 }
-p{
-  font-size: var(--fontsize-p);
-}
-h1,h2,h3,h4,p{
-  margin: 10px;
-}
-.social
-{
-  position: absolute;
-  margin-top: 20px;
-  display: flex;
-  bottom: 60px;
-}
-.social i
-{
-  padding-right: 30px;
-  font-size: 25px;
-  color: #9a9b9c;
-}
-.social i:hover
-{
-  color: #ffffff;
-}
+
 .widecard
 {
   border:0px solid #9a9b9c;
@@ -131,7 +149,23 @@ h1,h2,h3,h4,p{
   margin:30px;
 }
 
-@media all and (max-width: 450px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Styles commented out may have been defaults*/
+/* @media all and (max-width: 450px) {
   :root {
     --fontsize-nav:1rem;
     --sidebar-flex:0;
@@ -143,7 +177,7 @@ h1,h2,h3,h4,p{
   }
   .sidebar
   {
-    padding: 30px;
+    padding: px;
     background: rgb(238,103,143);
     background: linear-gradient(90deg, rgba(238,103,143,1) 50%, rgba(132,124,252,1) 80%);
   }
@@ -162,7 +196,7 @@ h1,h2,h3,h4,p{
   .social
   {
     left:0;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     bottom: 30px;
@@ -171,4 +205,84 @@ h1,h2,h3,h4,p{
   {
     padding-right: 0px;
   }
+} */
+
+/*Styles commented out may have been default*/
+/* @media only screen and (max-height: 569px) {
+.social
+  {
+    left:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    top: 5px;
+    bottom: 30px;
+  }
+  .social i
+  {
+    padding-right: 0px;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+/* @media only screen and (max-height: 530px) {
+  .typingeffect {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 30px;
+  }
 }
+
+@media only screen and (max-height: 490px) {
+  .typingeffect {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 30px;
+  }
+} */
+
+
+/* @media only screen and (max-height: 750px) {
+  .profilepic {
+  border-radius: 50%;
+  border: solid grey;
+  width: 300px;
+  margin: 30px;
+  }
+}
+
+@media only screen and (max-height: 630px) {
+  .profilepic {
+  border-radius: 50%;
+  border: solid grey;
+  width: 200px;
+  margin: 30px;
+  }
+}
+
+@media only screen and (max-height: 530px) {
+  .profilepic {
+  border-radius: 50%;
+  border: solid grey;
+  width: 150px;
+  margin: 30px;
+  }
+}
+
+@media only screen and (max-height: 430px) {
+  .profilepic {
+  border-radius: 50%;
+  border: solid grey;
+  width: 150px;
+  margin: 30px;
+  }
+} */
+
